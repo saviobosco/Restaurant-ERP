@@ -14,32 +14,38 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="card-body">
-                            {!! Form::open(['route' => 'products.store']) !!}
+
+                            {{ html()->form('POST')->route('products.store')->open() }}
 
 
                             <div class="form-group">
-                                {!! Form::label('name', 'Name') !!}
-                                {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                                {{ html()->label('Name', 'name') }}
+                                {{ html()->text('name')->placeholder('Enter Name')->class('form-control') }}
                             </div>
 
                             <div class="form-group">
-                                {!! Form::label('price', 'Price') !!}
-                                {!! Form::text('price', null, ['class' => 'form-control']) !!}
+                                {{ html()->label('Price', 'price') }}
+                                {{ html()->text('price')->placeholder('Enter Price')->class('form-control') }}
                             </div>
 
                             <div class="form-group">
-                                {!! Form::label('code', 'Code') !!}
-                                {!! Form::text('code', null, [
-                                'class' => 'form-control',
-                                'placeholder'=> 'Product Code (Optional)',
-                                'rows' => 5]) !!}
+{{--<!--                                {!! Form::label('code', 'Code') !!}--}}
+{{--                                {!! Form::text('code', null, [--}}
+{{--                                'class' => 'form-control',--}}
+{{--                                'placeholder'=> 'Product Code (Optional)',--}}
+{{--                                'rows' => 5]) !!}-->--}}
+
+                                {{ html()->label('Code', 'code') }}
+                                {{ html()->text('code')->placeholder('Product Code (Optional)')
+                                    ->class('form-control') }}
+
                             </div>
 
                             <div class="form-group">
-                                {!! Form::label('category_id', 'Category') !!}
+                                {{--{!! Form::label('category_id', 'Category') !!}
                                 {!! Form::select('category_id',["" => "--"] + $categories + [
                                 "add-category" => "+ Add Category"], null,
-                                ['class' => 'form-control', 'id' => 'product-category-id']) !!}
+                                ['class' => 'form-control', 'id' => 'product-category-id']) !!}--}}
                             </div>
 
                             <div class="form-group">
@@ -47,7 +53,7 @@
                                     Save Product
                                 </button>
                             </div>
-                            {!! Form::close() !!}
+                            {{ html()->form()->close() }}
 
                         </div>
                         <!-- /.box-body -->

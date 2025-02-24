@@ -8,24 +8,22 @@
     ],
     "license": "MIT",
     "require": {
-        "php": "^7.2.5|^8.0",
-        "akaunting/setting": "^1.2",
-        "barryvdh/laravel-dompdf": "^0.9.0",
-        "fideloper/proxy": "^4.4",
+        "php": "^8.2",
+        "akaunting/laravel-setting": "^1.2",
+        "barryvdh/laravel-dompdf": "^2.1.1",
         "konekt/concord": "^1.10",
-        "laravel/framework": "^6.20.26",
+        "laravel/framework": "^10.0",
         "laravel/tinker": "^2.5",
-        "laravelcollective/html": "^6.2",
         "picqer/php-barcode-generator": "^2.0",
-        "prettus/l5-repository": "^2.9"
-    },
+        "prettus/l5-repository": "^2.9",
+        "spatie/laravel-html": "^3.7",
+        "laravel/ui": "^4.5"},
     "require-dev": {
         "barryvdh/laravel-debugbar": "^3.6",
-        "facade/ignition": "^1.16.15",
+        "spatie/laravel-ignition": "^2.5.1",
         "fakerphp/faker": "^1.9.1",
-        "laravel/ui": "1.0",
         "mockery/mockery": "^1.0",
-        "nunomaduro/collision": "^3.0",
+        "nunomaduro/collision": "^6.1",
         "phpunit/phpunit": "^8.5.8|^9.3.3"
     },
     "config": {
@@ -43,12 +41,10 @@
             "App\\": "app/",
             "GriffonTech\\Admin\\": "packages/GriffonTech/Admin/src",
             "GriffonTech\\Sale\\": "packages/GriffonTech/Sale/src",
-            "GriffonTech\\Core\\": "packages/GriffonTech/Core/src"
-        },
-        "classmap": [
-            "database/seeds",
-            "database/factories"
-        ]
+            "GriffonTech\\Core\\": "packages/GriffonTech/Core/src",
+            "Database\\Factories\\": "database/factories/",
+            "Database\\Seeders\\": "database/seeders/"
+        }
     },
     "autoload-dev": {
         "psr-4": {
