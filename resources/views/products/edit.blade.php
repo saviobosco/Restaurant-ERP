@@ -14,31 +14,29 @@
                         </div>
                         <!-- /.box-header -->
                         <div class="card-body">
-                            {!! Form::model($product, ['route' => ['products.update', $product->id] ]) !!}
-
+                            {{ html()->modelForm($product)->route('products.update', $product->id)->open() }}
                             <div class="form-group">
-                                {!! Form::label('name', 'Name') !!}
-                                {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                                {{ html()->label('name', 'Name') }}
+                                {{ html()->text('name')->attribute('class', 'form-control') }}
                             </div>
 
                             <div class="form-group">
-                                {!! Form::label('price', 'Price') !!}
-                                {!! Form::text('price', null, ['class' => 'form-control']) !!}
+                                {{ html()->label('price', 'Price') }}
+                                {{ html()->number('price')->attribute('class', 'form-control') }}
                             </div>
 
                             <div class="form-group">
-                                {!! Form::label('code', 'Code') !!}
-                                {!! Form::text('code', null, [
+                                {{ html()->label('code', 'Code') }}
+                                {{ html()->text('code')->attributes([
                                 'class' => 'form-control',
                                 'placeholder'=> 'Product Code (Optional)',
-                                'rows' => 5]) !!}
+                                'rows' => 5]) }}
                             </div>
 
                             <div class="form-group">
-                                {!! Form::label('category_id', 'Category') !!}
-                                {!! Form::select('category_id',["" => "--"] + $categories + [
-                                "add-category" => "+ Add Category"], null,
-                                ['class' => 'form-control', 'id' => 'product-category-id']) !!}
+                                {{ html()->label('category_id', 'Category') }}
+                                {{ html()->select('category_id', ["" => "--"] + $categories)
+                                ->attributes(['class' => 'form-control', 'id' => 'product-category-id']) }}
                             </div>
 
                             <div class="form-group">
@@ -46,8 +44,7 @@
                                     Update Product
                                 </button>
                             </div>
-                            {!! Form::close() !!}
-
+                            {{ html()->form()->close() }}
                         </div>
                         <!-- /.box-body -->
 

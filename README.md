@@ -13,8 +13,8 @@ Main features
 
 ## Developers
 
-- **[Saviobosco](https://vehikl.com/)**
+- **[Saviobosco](https://github.com/saviobosco)**
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Restaurant ERP documentation]().
+Thank you for considering contributing to the Restaurant ERP! The contribution guide can be found in the [Restaurant ERP documentation]().
