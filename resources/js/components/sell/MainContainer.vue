@@ -11,7 +11,7 @@
                 <li class="quick__nav__item">
                     <a @click="currentTabSelected" class="quick__nav__link inactive"
                        :class="{'pointer_good': this.activeCard , 'active':this.isCurrent}"
-                       href="javascript:;">Current </a>
+                       href="javascript:;">Current {{ (activeCard)!== null ?  '-' + activeCard?.name : ''}} </a>
                 </li>
             </ul>
         </div>

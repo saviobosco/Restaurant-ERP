@@ -27,7 +27,7 @@
                             <!-- small box -->
                             <div class="small-box bg-white">
                                 <div class="inner">
-                                    <h3 class="fw-100">{{ $totalSales }}</h3>
+                                    <h3 class="fw-100">{{ number_format($totalSales, 2) }} NGN</h3>
 
                                     <p>Total Sales</p>
                                 </div>
